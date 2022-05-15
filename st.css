@@ -12,24 +12,21 @@ table {
 input[type=submit] {
     padding:5px 15px;
     background: #f3f3f3;
+    margin-left: 5px;
     border:0 none;
+    height: 26px;
     cursor:pointer;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 input[type="text"] {
     border: 1px solid #cccccc;
     border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -khtml-border-radius: 3px;
-    background: #ffffff !important;
+    background: #ffffff;
     outline: none;
     height: 24px;
     width: 120px;
     color: #000000;
     font-size: 11px;
-    font-family: Tahoma;
 }
 .formul {
     background: #E0E0FF;
