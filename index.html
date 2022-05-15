@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hh</title>
+    <link href="st.css" rel="stylesheet" type="text/css">
+    <script src="/sk.js"></script>
+</head>
+<body>
+<div class="formul" >
+    <p>Решить квадратное уравнение <b>a</b>&middot;x&sup2; + <b>b</b>&middot;x + <b>c</b> = 0.</p>
+    <form name="square" action="javascript:square_equation()">
+        a: <input name="square_a" type="text" value="1" size="4">
+        b: <input name="square_b" type="text" value="2" size="4">
+        c: <input name="square_c" type="text" value="1" size="4">
+        <input type="submit" value="решить">
+    </form>
+     <p id="square_sol">Введите числа и нажмите "решить"</p>
+</div>
+<p class="cent">Таблица результатов</p>
+<div id="table_div">
+    <table id="table_data" >
+        <tr>
+            <th>a</th>
+            <th>b</th>
+            <th>c</th>
+            <th>x1</th>
+            <th>x2</th>
+        </tr>
+
+    </table>
+</div>
+</body>
+</html>
+
