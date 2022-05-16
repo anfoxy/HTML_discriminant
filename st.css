@@ -4,10 +4,10 @@ body {
 }
 table {
     margin: auto;
-    border: 2px solid #8492bb;
+    border: 2px solid #919bbe;
     border-collapse: separate;
     width: 70%;
-
+    background: #e8edff;
 }
 input[type=submit] {
     padding:5px 15px;
@@ -29,7 +29,7 @@ input[type="text"] {
     font-size: 11px;
 }
 .formul {
-    background: #E0E0FF;
+    background:#d7d7fd;
     text-align: center;
     font-size: 120%;
     padding: 10px 15px;
@@ -38,6 +38,13 @@ input[type="text"] {
     padding-top: 50px;
     text-align: center;
     font-size: 110%;
+}
+tr.zg{
+    text-align: center;
+    background: #d7d7fd;
+    color: #669;
+    border-top: 1px solid #e8edff;
+    padding: 10px 15px;
 }
 th {
     text-align: center;
@@ -51,5 +58,5 @@ td {
     border-top: 1px solid #e8edff;
     padding: 10px 15px;
 }
-tr:nth-child(2n) {background: #e8edff;}
+tr:nth-child(2n) {background: #ffffff;}
 tr:hover { background-color: #E0E0FF; }

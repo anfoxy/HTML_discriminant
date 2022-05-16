@@ -9,32 +9,46 @@ function square_equation() {
     var c = document.square.square_c.value;
     var sol = document.getElementById("square_sol");
 
-    if (isInt(a) && isInt(b) && isInt(c)) {
-        string = "Решение:";
-        var d = b * b - 4 * a * c;
-        if (d < 0) {
-            string += "корней нет.";
-            add(a,b,c,NaN,NaN);
-
+    if(!isInt(a)){
+        string = "неправильная запись: " + a;
+        string += " (используйте только цифры от 0 до 9 и знаки: +, -)"
+    }else {
+        if (!isInt(b)) {
+            string = "неправильная запись: " + b;
+            string += " (используйте только цифры от 0 до 9 и знаки: +, -)"
         } else {
-            if (d === 0) {
-                var  x1 = (-b / (2 * a));
-                string += "<br>x<sub>1</sub> = x<sub>2</sub> = ";
-                string += x1;
-                string += ".";
-                add(a,b,c,x1,x1);
+            if (!isInt(c)) {
+                string = "неправильная запись: " + c;
+                string += " (используйте только цифры от 0 до 9 и знаки: +, -)"
             } else {
-                var  x1 = (-b / (2 * a) - Math.sqrt(d) / (2 * a));
-                var  x2 = (-b / (2 * a) + Math.sqrt(d) / (2 * a));
-                string += "<br>x<sub>1</sub> = ";
-                string += x1;
-                string += ", x<sub>2</sub> = ";
-                string += x2;
-                string += ".";
-                add(a,b,c,x1,x2);
+                string = "Решение:";
+                var d = b * b - 4 * a * c;
+                if (d < 0) {
+                    string += "корней нет.";
+                    add(a,b,c,NaN,NaN);
+
+                } else {
+                    if (d === 0) {
+                        var  x1 = (-b / (2 * a));
+                        string += "<br>x<sub>1</sub> = x<sub>2</sub> = ";
+                        string += x1;
+                        string += ".";
+                        add(a,b,c,x1,x1);
+                    } else {
+                        var  x1 = (-b / (2 * a) - Math.sqrt(d) / (2 * a));
+                        var  x2 = (-b / (2 * a) + Math.sqrt(d) / (2 * a));
+                        string += "<br>x<sub>1</sub> = ";
+                        string += x1;
+                        string += ", x<sub>2</sub> = ";
+                        string += x2;
+                        string += ".";
+                        add(a,b,c,x1,x2);
+                    }
+                }
             }
         }
-    } else string = "неправильная запись"
+    }
+
     sol.innerHTML = string;
 }
 
